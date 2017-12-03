@@ -9,3 +9,5 @@ The program shows all of the applications known to be able to open files. The co
 
 You may choose to either change or delete an entry. If you delete an entry, Windows won't know that it can "Open with" the application of the deleted entry. The next time you open a file associated with the application, Windows will either ask you which application should be used to open the file, or it will choose an application known to be able to.
 Changing an entry involves changing the path or arguments of an application. That's useful in case you have installed several versions of softwares with the same exe-filenames, and Windows has messed up the association.
+
+This software is licensed under: GNU General Public License version 3 | https://www.gnu.org/licenses/gpl-3.0.html
