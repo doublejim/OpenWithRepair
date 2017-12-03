@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>HelpDialog</class>
+ <widget class="QDialog" name="HelpDialog">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>530</width>
+    <height>361</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Help</string>
+  </property>
+  <layout class="QVBoxLayout" name="verticalLayout_2">
+   <item>
+    <widget class="QTabWidget" name="tabWidget">
+     <property name="currentIndex">
+      <number>0</number>
+     </property>
+     <widget class="QWidget" name="tab">
+      <attribute name="title">
+       <string>What problems can be fixed?</string>
+      </attribute>
+      <layout class="QVBoxLayout" name="verticalLayout">
+       <item>
+        <widget class="QPlainTextEdit" name="plainTextEdit">
+         <property name="readOnly">
+          <bool>true</bool>
+         </property>
+         <property name="plainText">
+          <string>With this program you can cure the effects of a bug that exists in several Windows releases (at least Windows XP and Windows 7 are affected).
+
+The bug involves attempting to open a file with an application. Some times, after selecting the application you wish to open the file with, it isn't put on the list of programs to choose from. The bug exists because Windows already has a path to an application with that filename. Windows doesn't allow overriding the application path, whether the old application path exists or not, so this will obviously result in errors. An easy fix is to rename the exe-file to something new (in Explorer). Then you can choose to open with the application.
+
+With this program you can edit all known application entries. If an entry has very specific arguments, you might want to think twice about deleting it. The standard entry has a file path and &quot;%1&quot;, which will be replaced by the path to the file you are opening. If Explorer can't find an application entry because you deleted it, you will either be asked which application you want to open the file with, or Explorer just opens the file with an alternate application.</string>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+     <widget class="QWidget" name="tab_2">
+      <attribute name="title">
+       <string>The easiest way to use this program</string>
+      </attribute>
+      <layout class="QVBoxLayout" name="verticalLayout_3">
+       <item>
+        <widget class="QPlainTextEdit" name="plainTextEdit_2">
+         <property name="readOnly">
+          <bool>true</bool>
+         </property>
+         <property name="plainText">
+          <string>The safest, easiest way to use this program is to delete the red entries (the entries with problems), or delete the entry for a program where you are going to use a new executable with the same filename (fx. if you are going to use a new winword.exe).
+
+Then you can select the correct application via the &quot;Open with&quot; right click menu in Explorer.
+
+Feeling more advanced?
+You can choose to Browse for the correct application path here in this program.
+
+Feeling even more advanced?
+You can go ahead and directly manipulate the executed commands and all their arguments, when opening with the applications.</string>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+    </widget>
+   </item>
+   <item>
+    <widget class="QDialogButtonBox" name="buttonBox">
+     <property name="orientation">
+      <enum>Qt::Horizontal</enum>
+     </property>
+     <property name="standardButtons">
+      <set>QDialogButtonBox::Close</set>
+     </property>
+     <property name="centerButtons">
+      <bool>true</bool>
+     </property>
+    </widget>
+   </item>
+  </layout>
+ </widget>
+ <resources/>
+ <connections>
+  <connection>
+   <sender>buttonBox</sender>
+   <signal>accepted()</signal>
+   <receiver>HelpDialog</receiver>
+   <slot>accept()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>248</x>
+     <y>254</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>157</x>
+     <y>274</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>buttonBox</sender>
+   <signal>rejected()</signal>
+   <receiver>HelpDialog</receiver>
+   <slot>reject()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>316</x>
+     <y>260</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>286</x>
+     <y>274</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+</ui>
